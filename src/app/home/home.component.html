@@ -1,0 +1,11 @@
+<h1>Home component</h1>
+<app-header></app-header>
+<p>This is from home component</p>
+<p>
+    Hi {{name}}, you are {{age}} years old. Your email is {{email}}
+</p>
+<input type="text" [value]='name'>
+<button (click)='increaseAge()'>Increase Age</button>
+<button (click)='decreaseAge()'>Decrease Age</button>
+<app-test></app-test>
+<app-footer></app-footer>
