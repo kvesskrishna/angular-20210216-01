@@ -4,8 +4,16 @@
 <p>
     Hi {{name}}, you are {{age}} years old. Your email is {{email}}
 </p>
-<input type="text" [value]='name'>
+
+<input [ngStyle]="{'border': inputBoxColor}" type="text" [value]='name' (focus)='inputFocus()'
+    (keyup)='updateName($event)' (blur)="inputBlur($event)">
+<p style="color:red">{{inputMsg}}</p>
+
+<input type="text" [(ngModel)]='name'>
 <button (click)='increaseAge()'>Increase Age</button>
 <button (click)='decreaseAge()'>Decrease Age</button>
+
+
+<app-age-validator></app-age-validator>
 <app-test></app-test>
 <app-footer></app-footer>

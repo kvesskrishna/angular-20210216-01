@@ -1,0 +1,6 @@
+<!-- <h1 [ngStyle]="{'color': headColor}">{{age?(age>=18?'Valid age': 'Invalid age'):'Please enter your age'}}</h1> -->
+<h1 [ngStyle]="{'color': age?(age>=18?'green':'red'):'black'}">{{age?(age>=18?'Valid age': 'Invalid age'):'Please enter
+    your age'}}</h1>
+<!-- <h4>Equivalent HTML: {{element}}</h4> -->
+<!-- <input type="text" (keyup)='setAge($event)'> -->
+<input type="text" [(ngModel)]='age'>
