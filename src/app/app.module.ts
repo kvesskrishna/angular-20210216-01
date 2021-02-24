@@ -10,6 +10,8 @@ import { FooterComponent } from './footer/footer.component';
 import { TestComponent } from './test/test.component';
 import { AgeValidatorComponent } from './age-validator/age-validator.component';
 import { MathsTableComponent } from './maths-table/maths-table.component';
+import { NgforComponent } from './ngfor/ngfor.component';
+import { NgclassComponent } from './ngclass/ngclass.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { MathsTableComponent } from './maths-table/maths-table.component';
     TestComponent,
     AgeValidatorComponent,
     MathsTableComponent,
+    NgforComponent,
+    NgclassComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

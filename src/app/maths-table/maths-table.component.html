@@ -1,8 +1,20 @@
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, unde, quibusdam dolorem ad debitis saepe,<span
+        style="background: yellow; visibility: hidden; ">this is in span</span> tempora corporis minus maiores commodi
+    dicta
+    mollitia. Culpa enim,
+    quam cupiditate exercitationem voluptatem voluptate. Aliquam?</p>
 Enter number: <input type="text" [(ngModel)]="number" (keyup)='generateTable()'>
 <br>
 Enter range: <input type="text" [(ngModel)]="range" (keyup)='generateTable()'>
+
+<select (change)='changeView($event)'>
+    <option [value]="option1">List Fashion</option>
+    <option [value]="'div'">Div Fashion</option>
+    <option [value]="'color'">Color Fashion</option>
+</select>
 <p>
     Printing {{number}} table till {{range}}
 </p>
-<ul [innerHTML]="table"></ul>
-<!-- <div [innerHTML]="table2"></div> -->
+<ul *ngIf="options.list" [innerHTML]="table"></ul>
+<div *ngIf="options.div" [innerHTML]="table2"></div>
+<div *ngIf="options.color" [innerHTML]="table2" style='color: green'></div>
