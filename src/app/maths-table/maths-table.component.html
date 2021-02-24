@@ -1,0 +1,8 @@
+Enter number: <input type="text" [(ngModel)]="number" (keyup)='generateTable()'>
+<br>
+Enter range: <input type="text" [(ngModel)]="range" (keyup)='generateTable()'>
+<p>
+    Printing {{number}} table till {{range}}
+</p>
+<ul [innerHTML]="table"></ul>
+<!-- <div [innerHTML]="table2"></div> -->

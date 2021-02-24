@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { TestComponent } from './test/test.component';
 import { AgeValidatorComponent } from './age-validator/age-validator.component';
+import { MathsTableComponent } from './maths-table/maths-table.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { AgeValidatorComponent } from './age-validator/age-validator.component';
     FooterComponent,
     TestComponent,
     AgeValidatorComponent,
+    MathsTableComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
