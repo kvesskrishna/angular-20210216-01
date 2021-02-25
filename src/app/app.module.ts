@@ -15,6 +15,9 @@ import { NgclassComponent } from './ngclass/ngclass.component';
 import { ImageSelectorComponent } from './image-selector/image-selector.component';
 import { CustomDirectivesComponent } from './custom-directives/custom-directives.component';
 import { HighlightDirective } from './directives/highlight.directive';
+import { OperateDirective } from './directives/operate.directive';
+import { PipesComponent } from './pipes/pipes.component';
+import { DiscountPipe } from './pipes/custom/discount.pipe';
 
 @NgModule({
   declarations: [
@@ -30,6 +33,9 @@ import { HighlightDirective } from './directives/highlight.directive';
     ImageSelectorComponent,
     CustomDirectivesComponent,
     HighlightDirective,
+    OperateDirective,
+    PipesComponent,
+    DiscountPipe,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
