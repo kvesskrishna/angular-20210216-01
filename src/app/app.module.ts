@@ -12,6 +12,9 @@ import { AgeValidatorComponent } from './age-validator/age-validator.component';
 import { MathsTableComponent } from './maths-table/maths-table.component';
 import { NgforComponent } from './ngfor/ngfor.component';
 import { NgclassComponent } from './ngclass/ngclass.component';
+import { ImageSelectorComponent } from './image-selector/image-selector.component';
+import { CustomDirectivesComponent } from './custom-directives/custom-directives.component';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { NgclassComponent } from './ngclass/ngclass.component';
     MathsTableComponent,
     NgforComponent,
     NgclassComponent,
+    ImageSelectorComponent,
+    CustomDirectivesComponent,
+    HighlightDirective,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

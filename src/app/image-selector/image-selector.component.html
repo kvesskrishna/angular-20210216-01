@@ -1,0 +1,7 @@
+<p>image-selector works!</p>
+<select (change)="selectImage($event)">
+    <option *ngFor="let option of images" [value]="option.id">{{option.title}}</option>
+</select>
+<span *ngFor="let image of images">
+    <img *ngIf="image.show" [src]="image.url" alt="">
+</span>
