@@ -1,4 +1,8 @@
 <h1>App Component</h1>
 <p>This is the root component.</p>
-<app-home></app-home>
+<a href="" [routerLink]="['/home']" routerLinkActive="router-link-active"
+    [routerLinkActiveOptions]="{exact: true}">Home</a>&nbsp;&nbsp;
+<a href="" [routerLink]="['/directive']" routerLinkActive="router-link-active">Directives</a>&nbsp;&nbsp;
+<a href="" [routerLink]="['/random']" routerLinkActive="router-link-active">404</a>&nbsp;&nbsp;
+<!-- <app-home></app-home> -->
 <router-outlet></router-outlet>

@@ -22,6 +22,8 @@ import { SearchPipeComponent } from './search-pipe/search-pipe.component';
 import { SearchPipe } from './pipes/search.pipe';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { SiblingComponent } from './sibling/sibling.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { ChildComponent } from './child/child.component';
     SearchPipe,
     ParentComponent,
     ChildComponent,
+    SiblingComponent,
+    PageNotFoundComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],
