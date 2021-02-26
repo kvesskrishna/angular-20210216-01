@@ -18,6 +18,10 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { OperateDirective } from './directives/operate.directive';
 import { PipesComponent } from './pipes/pipes.component';
 import { DiscountPipe } from './pipes/custom/discount.pipe';
+import { SearchPipeComponent } from './search-pipe/search-pipe.component';
+import { SearchPipe } from './pipes/search.pipe';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +40,10 @@ import { DiscountPipe } from './pipes/custom/discount.pipe';
     OperateDirective,
     PipesComponent,
     DiscountPipe,
+    SearchPipeComponent,
+    SearchPipe,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

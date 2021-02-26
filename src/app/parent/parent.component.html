@@ -1,0 +1,9 @@
+<h1>PARENT</h1>
+<!-- <h4>Number: {{number}}</h4> -->
+<h4>Numbers: {{numbers | json}}</h4>
+<button (click)="incNum()">Increase</button>
+<div class="row">
+    <!-- <app-child [num]='number' (decreq)="decNum($event)" (increq)="incNumber($event)"></app-child> -->
+    <app-child *ngFor="let num of numbers; let i = index" [num]='num' (increq)="incNumber($event,i)"
+        (decreq)="decNum($event,i)"></app-child>
+</div>
