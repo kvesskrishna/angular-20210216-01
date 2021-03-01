@@ -1,0 +1,35 @@
+<table class="table table-danger">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>EMail</th>
+            <TH>Phone</TH>
+            <th>City</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor='let user of users'>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.address.city}}</td>
+            <td>
+                <button class="btn btn-primary" [routerLink]="['/user', user.id, user.name]">View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div>
+    <input type="text" [(ngModel)]="id">
+    <br>
+    <input type="text" [(ngModel)]="title">
+    <br>
+    <input type="text" [(ngModel)]="body">
+    <br>
+    <button (click)="submit()">Submit</button>
+</div>
+<div>
+    {{response | json}}
+</div>

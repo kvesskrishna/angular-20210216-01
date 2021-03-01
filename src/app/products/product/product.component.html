@@ -3,12 +3,15 @@
     <br>
     <img [src]="product.image" alt="product image">
     <p>{{product.description}}</p>
-    <p>Our Price: {{product.price | currency : 'INR'}}</p>
+    <p *ngIf="product.quantity">Our Price: {{product.price*product.quantity| currency : 'INR'}}</p>
+    <p *ngIf="!product.quantity">Our Price: {{product.price| currency : 'INR'}}</p>
     <p>Your Price:{{product.price|discount:25:18|currency : 'INR'}}</p>
     <div>
         <label for="">Quantity: {{product.quantity}}</label>
         <br>
         <button (click)="setQuantity('add', product.id)">+</button>
         <button (click)="setQuantity('remove', product.id)">-</button>
+        <br>
+        <button class="btn btn-success">Explore</button>
     </div>
 </div>
