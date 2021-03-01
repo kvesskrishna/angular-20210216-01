@@ -24,6 +24,8 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { SiblingComponent } from './sibling/sibling.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductComponent } from './products/product/product.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     ChildComponent,
     SiblingComponent,
     PageNotFoundComponent,
+    ProductsComponent,
+    ProductComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [],

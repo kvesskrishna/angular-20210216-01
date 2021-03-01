@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+
+            <h2 class="text-center">Products</h2>
+            <!-- <h3>Cart Total: {{total | currency : 'INR'}}</h3> -->
+            <h4>Total Items in Cart {{itemCount}} <span style="font-size: 12px;">{{total| discount:25:18 | currency :
+                    'INR'}}</span>
+            </h4>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3" *ngFor="let product of products; let i = index">
+            <br>
+            <app-product (changeQuant)='updateQuantity($event)' [product]="product"></app-product>
+        </div>
+    </div>
+
+</div>

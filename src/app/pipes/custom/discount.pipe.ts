@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DiscountPipe implements PipeTransform {
   transform(value: any, ...args: unknown[]): unknown {
-    console.log(args);
+    console.log(value, args);
     let discount: any = args[0];
     let tax: any = args[1];
     value = parseInt(value);
