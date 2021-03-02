@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthGuardService } from './services/auth-guard.service';
 
 @Component({
   selector: 'app-root',
@@ -6,8 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  constructor() {
+  constructor(private auth: AuthGuardService) {
     console.log('constructor from app loaded..');
   }
+  logged = this.auth.userlogged;
   title = 'my-app';
 }

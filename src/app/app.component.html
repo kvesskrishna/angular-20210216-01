@@ -5,6 +5,8 @@
 <a href="" [routerLink]="['/directive']" routerLinkActive="router-link-active">Directives</a>&nbsp;&nbsp;
 <a href="" [routerLink]="['/products']" routerLinkActive="router-link-active">Products</a>&nbsp;&nbsp;
 <a href="" [routerLink]="['/users']" routerLinkActive="router-link-active">Users</a>&nbsp;&nbsp;
+<a *ngIf="!logged" href="" [routerLink]="['/login']" routerLinkActive="router-link-active">Login</a>&nbsp;&nbsp;
+<a *ngIf="logged" href="" [routerLink]="['/logout']" routerLinkActive="router-link-active">Logout</a>&nbsp;&nbsp;
 
 <a href="" [routerLink]="['/random']" routerLinkActive="router-link-active">404</a>&nbsp;&nbsp;
 <!-- <app-home></app-home> -->

@@ -15,7 +15,7 @@
             <td>{{user.phone}}</td>
             <td>{{user.address.city}}</td>
             <td>
-                <button class="btn btn-primary" [routerLink]="['/user', user.id, user.name]">View</button>
+                <button class="btn btn-primary" [routerLink]="['../user', user.id, user.name]">View</button>
             </td>
         </tr>
     </tbody>

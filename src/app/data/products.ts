@@ -7,6 +7,8 @@ const products = [
       'https://hbr.org/resources/images/article_assets/2020/04/Apr20_07_1162572100.jpg',
     price: 1234,
     quantity: 0,
+    colors: ['red', 'blue', 'green', 'yellow'],
+    sizes: ['small', 'big'],
   },
   {
     id: 2,
@@ -16,6 +18,8 @@ const products = [
       'https://hbr.org/resources/images/article_assets/2020/04/Apr20_07_1162572100.jpg',
     price: 5433,
     quantity: 0,
+    colors: ['red', 'blue', 'green', 'yellow'],
+    sizes: ['small', 'big'],
   },
   {
     id: 3,
@@ -25,6 +29,8 @@ const products = [
       'https://hbr.org/resources/images/article_assets/2020/04/Apr20_07_1162572100.jpg',
     price: 890,
     quantity: 0,
+    colors: ['red', 'blue', 'green', 'yellow'],
+    sizes: ['small', 'big'],
   },
   {
     id: 4,
@@ -34,6 +40,8 @@ const products = [
       'https://hbr.org/resources/images/article_assets/2020/04/Apr20_07_1162572100.jpg',
     price: 32,
     quantity: 0,
+    colors: ['red', 'blue', 'green', 'yellow'],
+    sizes: ['small', 'big'],
   },
   {
     id: 5,
@@ -43,6 +51,8 @@ const products = [
       'https://hbr.org/resources/images/article_assets/2020/04/Apr20_07_1162572100.jpg',
     price: 12,
     quantity: 0,
+    colors: ['red', 'blue', 'green', 'yellow'],
+    sizes: ['small', 'big'],
   },
 ];
 

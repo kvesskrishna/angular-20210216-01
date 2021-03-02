@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import products from '../data/products';
+import { ProductService } from '../services/product.service';
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css'],
 })
 export class ProductsComponent implements OnInit {
-  products: any = products;
   total: number = 0;
   itemCount: number = 0;
-  constructor() {}
+  constructor(private product: ProductService) {}
+  products: any = this.product.products;
 
   ngOnInit(): void {
     console.log(this.products);

@@ -12,6 +12,6 @@
         <button (click)="setQuantity('add', product.id)">+</button>
         <button (click)="setQuantity('remove', product.id)">-</button>
         <br>
-        <button class="btn btn-success">Explore</button>
+        <button [routerLink]="['/detail', product.id]" class="btn btn-success">Explore</button>
     </div>
 </div>
