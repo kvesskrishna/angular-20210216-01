@@ -13,14 +13,23 @@ import { UsersComponent } from './users/users.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'directive', component: CustomDirectivesComponent },
-  { path: 'products', component: ProductsComponent },
+  {
+    path: 'directive',
+    component: CustomDirectivesComponent,
+    canActivate: [AuthGuardService],
+  },
+  {
+    path: 'products',
+    component: ProductsComponent,
+    canActivate: [AuthGuardService],
+  },
   {
     path: 'users',
     loadChildren: './users/users.module#UsersModule',
     canActivate: [AuthGuardService],
   },
   { path: 'detail/:id', component: ProductDetailComponent },
+  { path: 'login/:path', component: LoginComponent },
   { path: 'login', component: LoginComponent },
 
   { path: '**', component: PageNotFoundComponent },

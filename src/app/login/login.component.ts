@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 import { AuthGuardService } from '../services/auth-guard.service';
 @Component({
   selector: 'app-login',
@@ -7,12 +8,17 @@ import { AuthGuardService } from '../services/auth-guard.service';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  constructor(private router: Router, private auth: AuthGuardService) {}
+  constructor(
+    private router: Router,
+    private auth: AuthGuardService,
+    private route: ActivatedRoute
+  ) {}
 
   credentials = { email: 'user@email.com', password: '1234' };
   email: string = '';
   password: string = '';
   message = 'Enter credentials';
+  path = this.route.snapshot.params.path ? this.route.snapshot.params.path : '';
   ngOnInit(): void {}
   login(): void {
     if (this.email.length == 0) {
@@ -37,7 +43,8 @@ export class LoginComponent implements OnInit {
     }
     this.auth.setLogged(true);
     this.message = 'Login Success';
-
-    this.router.navigate(['/users']);
+    this.path.length == 0
+      ? this.router.navigate(['/home'])
+      : this.router.navigate(['/' + this.path]);
   }
 }
